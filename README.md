@@ -1,0 +1,2 @@
+# CoreJavaSampleCode
+For Interview and 
