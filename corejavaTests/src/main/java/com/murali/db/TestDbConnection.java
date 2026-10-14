@@ -25,9 +25,8 @@ public class TestDbConnection {
 		return connection;
 	}
 	public static void main(String[] args) throws ClassNotFoundException {		    		    		   
-		    try {
-		    	Class.forName("org.postgresql.Driver");
-				Connection con = DriverManager.getConnection(url+"/"+dbname+"?user="+username+"&password="+password);
+		    try {		    	
+				Connection con = getConnection();						
 				Statement st = con.createStatement();
 				ResultSet rs = st.executeQuery("select * from devteam");
 				while(rs.next()) {
